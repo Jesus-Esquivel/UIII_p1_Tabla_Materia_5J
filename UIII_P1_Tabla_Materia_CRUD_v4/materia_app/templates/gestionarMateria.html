@@ -32,7 +32,7 @@
             <th scope="col">#</th>
             <th scope="col">codigo</th>
             <th scope="col">Nombre</th>
-            <th colspan="2">Creditos<th>
+            <th scope="col">Creditos</th>
         </tr>
         </thead>
         <tbody>
@@ -42,9 +42,8 @@
             <td>{{M.codigo}}</td>
             <td>{{M.nombre}}</td>
             <td>{{M.creditos}}</td>
-            <td><a href="seleccionarMateria/{{M.codigo}}" class="btn btn-info">Editar</a></td><!--falta link-->
-            <td><a href="borrarMateria/{{M.codigo}}" class="btn btn-danger">Borrar</a></td><!--falta link-->
-
+            <td> <a href="seleccionarMateria/{{M.codigo}}" class="btn btn-info">Editar</a></td>
+            <td><a href="borrarMateria/{{M.codigo}}" class="btn btn-danger">Borrar</a></td> 
             </tr>
             {% endfor %}
         </tbody>
