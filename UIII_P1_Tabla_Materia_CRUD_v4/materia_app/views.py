@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Materia
 # Create your views here.
-def inicio_vista(request):
+def inicio_vistaMateria(request):
     lasmateria=Materia.objects.all()
     return  render(request,"gestionarMateria.html",{"mismateria":lasmateria})
 
@@ -15,7 +15,7 @@ def registrarMateria(request):
         codigo=codigo,nombre=nombre,creditos=creditos
     )#GUARDA EL REGISTRO
 
-    return redirect("/")
+    return redirect("materia")
 
 def SeleccionarMateria(request,codigo):
     materia=Materia.objects.get(codigo=codigo)
@@ -29,11 +29,11 @@ def editarMateria(request):
     materia.nombre=nombre
     materia.creditos=creditos
     materia.save() #Guarda Registro Actualizado
-    return redirect("/")
+    return redirect("materia")
 
 def borrarMateria(request,codigo):
     materia=Materia.objects.get(codigo=codigo)
     materia.delete() #Borrar El Registro
-    return redirect("/")
+    return redirect("materia")
 
     
