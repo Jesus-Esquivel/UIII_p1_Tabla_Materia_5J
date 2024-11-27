@@ -24,9 +24,9 @@
 </div><!--columa izquierda-->
 <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4">
     <!--columna derecha-->
-    <h1>Lista de materias</h1>
+    <h1>Papa</h1>
     <div class="table-responsive"><!--tabla resposive-->
-    <table class="table">
+    <table class="table table-striped">
         <thead>
         <tr>
             <th scope="col">#</th>
@@ -42,8 +42,8 @@
             <td>{{M.codigo}}</td>
             <td>{{M.nombre}}</td>
             <td>{{M.creditos}}</td>
-            <td><a href="seleccionarMateria/{{M.codigo}}" class="btn btn-info">Editar</a></td> <!--Falta link-->
-            <td><a href="borrarMateria/{{M.codigo}}" class="btn btn-danger">Borrar</a></td>
+            <td> <a href="seleccionarMateria/{{M.codigo}}" class="btn btn-info">Editar</a></td>
+            <td><a href="borrarMateria/{{M.codigo}}" class="btn btn-danger">Borrar</a></td> 
             </tr>
             {% endfor %}
         </tbody>

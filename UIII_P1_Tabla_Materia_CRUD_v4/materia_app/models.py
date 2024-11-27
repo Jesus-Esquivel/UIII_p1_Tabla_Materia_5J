@@ -6,5 +6,7 @@ class Materia(models.Model):
     nombre=models.CharField(max_length=100)
     creditos=models.PositiveSmallIntegerField()
 
+
+
     def __str__(self):
         return self.nombre
